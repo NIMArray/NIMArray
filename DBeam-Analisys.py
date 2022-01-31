@@ -2,6 +2,9 @@
 x is x axis, y is y axis, i is axis value, e.g., frequency and j
 is j axis value, e.g., Stokes I, etc."""
 
+"""First you must export the psf image from your data set in to
+a fits file, then read the header and finally use this script""""
+
 
 
 from numpy import *
@@ -21,7 +24,6 @@ def get_arg(idict):
     #and return already the string of the fits image
     image = idict["image"]
     return image
-
 
 
 img = fits.open(get_arg(args)) #get_arg(args) = "your-fits-file.fits"
